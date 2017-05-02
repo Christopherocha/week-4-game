@@ -1,0 +1,29 @@
+#body {
+	background: #000 url(../images/starWars.jpg) no-repeat;
+	background-size: cover;
+}
+
+.container {
+	height: 200px;
+	width: 800px;
+	background-color: #fff;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.label {
+	color: #fff;
+	font-size: 14px;
+}
+
+.img-container {
+	width: 196px;
+	height: 196px;
+	float: left;
+	/*border: 1px solid #000*/
+}
+
+.green {
+	border: 2px solid #66ff66;
+}
+
