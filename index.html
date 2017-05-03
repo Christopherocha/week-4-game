@@ -5,7 +5,8 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link rel="javascript" type="text/javascript" href="assets/javascript/game.js">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="assets/javascript/game.js"></script>
 </head>
 <body id="body">
 	<header>
@@ -13,29 +14,79 @@
 	</header>
 	<div class="wrapper">
 		<div id="characters" class="container">
-			<div class="img-container green" id="choose-obi">
-				
+			<div class="img-container green"">
+				<a href="#" id="choose-erlich">
+					<div class="text character-name">Erlich</div>
+					<img class="character-img" src="assets/images/erlich.jpeg" alt="erlich">
+					<div class="text character-pwr">120</div>
+				</a>
 			</div>
-			<div class="img-container green" id="choose-luke">
-				
+			<div class="img-container green">
+				<a href="#" id="choose-dinesh">
+					<div class="text character-name">Dinesh</div>
+					<img class="character-img" src="assets/images/dinesh.jpeg" alt="dinesh">
+					<div class="text character-pwr">100</div>
+				</a>
 			</div>
-			<div class="img-container green" id="choose-sidious">
-				
+			<div class="img-container green">
+				<a href="#" id="choose-gilfoyle">
+					<div class="text character-name">Gilfoyle</div>
+					<img class="character-img" src="assets/images/gilfoyle.jpeg" alt="gilfoyle">
+					<div class="text character-pwr">150</div>
+				</a>
 			</div>
-			<div class="img-container green" id="choose-maul">
-				
+			<div class="img-container green">
+				<a href="#" id="choose-gavin">
+					<div class="text character-name">Gavin</div>
+					<img class="character-img" src="assets/images/gavin.jpeg" alt="gavin">
+					<div class="text character-pwr">180</div>
+				</a>
 			</div>
 		</div>
 		<div class="label">Your Character</div>
-		<div class="container">
-			<div class="img-container" id="chosen">
-				<img id="chosen-img" src="" alt="chosen player"/>
+		<div class="container" id="chosen-character">
+			<div class="img-container green" id="chosen-erlich">
+				<div class="text character-name">Erlich</div>
+				<img class="character-img" src="assets/images/erlich.jpeg" alt="erlich">
+				<div class="text character-pwr">120</div>
+			</div>
+			<div class="img-container green" id="chosen-dinesh">
+				<div class="text character-name">Dinesh</div>
+				<img class="character-img" src="assets/images/dinesh.jpeg" alt="dinesh">
+				<div class="text character-pwr">100</div>
+			</div>
+			<div class="img-container green" id="chosen-gilfoyle">
+				<div class="text character-name">Gilfoyle</div>
+				<img class="character-img" src="assets/images/gilfoyle.jpeg" alt="gilfoyle">
+				<div class="text character-pwr">150</div>
+			</div>
+			<div class="img-container green" id="chosen-gavin">
+				<div class="text character-name">Gavin</div>
+				<img class="character-img" src="assets/images/gavin.jpeg" alt="gavin">
+				<div class="text character-pwr">180</div>
 			</div>
 		</div>
 		<div class="label">Enemies Available To Attack</div>
-		<div class="container">
-			<div class="img-container" id="enemies">
-				
+		<div class="container" id="enemy-row">
+			<div class="img-container red" id="fight-erlich">
+				<div class="text character-name">Erlich</div>
+				<img class="character-img" src="assets/images/erlich.jpeg" alt="erlich">
+				<div class="text character-pwr">120</div>
+			</div>
+			<div class="img-container red" id="fight-dinesh">
+				<div class="text character-name">Dinesh</div>
+				<img class="character-img" src="assets/images/dinesh.jpeg" alt="dinesh">
+				<div class="text character-pwr">100</div>
+			</div>
+			<div class="img-container red" id="fight-gilfoyle">
+				<div class="text character-name">Gilfoyle</div>
+				<img class="character-img" src="assets/images/gilfoyle.jpeg" alt="gilfoyle">
+				<div class="text character-pwr">150</div>
+			</div>
+			<div class="img-container red" id="fight-gavin">
+				<div class="text character-name">Gavin</div>
+				<img class="character-img" src="assets/images/gavin.jpeg" alt="gavin">
+				<div class="text character-pwr">180</div>
 			</div>
 		</div>
 		<div class="label">Fight Section</div>
@@ -43,9 +94,26 @@
 			<button id="attack">Attack</button>
 		</div>
 		<div class="label">Defender</div>
-		<div class="container">
-			<div class="img-container" id="opponent">
-				
+		<div class="container" id="current-opponent">
+			<div class="img-container red" id="fight-erlich">
+				<div class="text character-name">Erlich</div>
+				<img class="character-img" src="assets/images/erlich.jpeg" alt="erlich">
+				<div class="text character-pwr">120</div>
+			</div>
+			<div class="img-container red" id="fight-dinesh">
+				<div class="text character-name">Dinesh</div>
+				<img class="character-img" src="assets/images/dinesh.jpeg" alt="dinesh">
+				<div class="text character-pwr">100</div>
+			</div>
+			<div class="img-container red" id="fight-gilfoyle">
+				<div class="text character-name">Gilfoyle</div>
+				<img class="character-img" src="assets/images/gilfoyle.jpeg" alt="gilfoyle">
+				<div class="text character-pwr">150</div>
+			</div>
+			<div class="img-container red" id="fight-gavin">
+				<div class="text character-name">Gavin</div>
+				<img class="character-img" src="assets/images/gavin.jpeg" alt="gavin">
+				<div class="text character-pwr">180</div>
 			</div>
 		</div>
 		<div>

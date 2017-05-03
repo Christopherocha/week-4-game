@@ -1,10 +1,10 @@
 #body {
-	background: #000 url(../images/starWars.jpg) no-repeat;
+	background: #000 url(../images/siliconValley.jpg) no-repeat;
 	background-size: cover;
 }
 
 .container {
-	height: 200px;
+	height: 168px;
 	width: 800px;
 	background-color: #fff;
 	position: relative;
@@ -13,17 +13,68 @@
 
 .label {
 	color: #fff;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .img-container {
 	width: 196px;
-	height: 196px;
+	height: 165px;
 	float: left;
-	/*border: 1px solid #000*/
+	border:  2px solid;
+	position: relative;
+	text-align: center;
 }
 
 .green {
-	border: 2px solid #66ff66;
+	border-color: #66ff66;
 }
 
+.red {
+
+}
+
+.character-img {
+	width: 150px;
+    height: 115px;
+    position: absolute;
+    left: 23px;
+    top: 20px;
+}
+
+.character-name {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.character-pwr {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+
+
+#enemy-row {
+	display: none;
+}
+
+#restart {
+	display: none;
+}
+
+#chosen-erlich {
+	display: none;
+}
+
+#chosen-dinesh {
+	display: none;
+}
+
+#chosen-gilfoyle {
+	display: none;
+}
+
+#chosen-gavin {
+	display: none;
+}

@@ -4,25 +4,25 @@ var currentEnemy= ;
 
 var players = {
 	player1:{
-		name: "obi-wan",
+		name: "Erlich",
 		healthPoints: ,
 		attack: ,
 		counterAttack:
 	},
 	player2:{
-		name: "luke skywalker",
+		name: "Dinesh",
 		healthPoints: ,
 		attack: ,
 		counterAttack:
 	},
 	player3:{
-		name: "darth-sidious",
+		name: "Gilfoyle",
 		healthPoints: ,
 		attack: ,
 		counterAttack:
 	},
 	player4:{
-		name: "darth-maul",
+		name: "Gavin",
 		healthPoints: ,
 		attack: ,
 		counterAttack: 25;
@@ -31,26 +31,29 @@ var players = {
 
 $(document).ready( function() {
 
-	$("#choose-obi").on("click", function() {
-			characterSet = true;
-			chosenCharacter = players.player1;
+	$("#choose-erlich").on("click", function() {
+		characterSet = true;
+		chosenCharacter = players.player1;
+
+		$("#characters").hide();
+
 	});
 
-	$("#choose-luke").on("click", function() {
+	$("#choose-dinesh").on("click", function() {
 			characterSet = true;
 			chosenCharacter = players.player2;
 	});
 
-	$("#choose-sidious").on("click", function() {
+	$("#choose-gilfoyle").on("click", function() {
 			characterSet = true;
 			chosenCharacter = players.player3;
 	});
 
-	$("#choose-maul").on("click", function() {
+	$("#choose-gavin").on("click", function() {
 			characterSet = true;
 			chosenCharacter = players.player4;
 	});
 
-	
+
 
 });
