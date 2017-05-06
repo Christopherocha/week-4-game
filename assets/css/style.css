@@ -9,6 +9,7 @@
 	background-color: #fff;
 	position: relative;
 	margin-bottom: 10px;
+	background-color: transparent;
 }
 
 .label {
@@ -23,6 +24,7 @@
 	border:  2px solid;
 	position: relative;
 	text-align: center;
+	background-color: #fff;
 }
 
 .green {
@@ -30,7 +32,8 @@
 }
 
 .red {
-
+	border-color: #000;
+	background-color: red;
 }
 
 .character-img {
@@ -47,7 +50,19 @@
 	width: 100%;
 }
 
-.character-pwr {
+.character-hp {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.chosen-hp {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.defender-hp {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
@@ -76,5 +91,13 @@
 }
 
 #chosen-gavin {
+	display: none;
+}
+
+#current-opponent {
+	display: none;
+}
+
+#chosen {
 	display: none;
 }

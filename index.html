@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Star Wars RPG Game</title>
+	<title>Silicon Valley RPG Game</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -10,47 +10,47 @@
 </head>
 <body id="body">
 	<header>
-		<h1 class="label" id="h1">Star Wars RPG!</h1>
+		<h1 class="label" id="h1">Silicon Valley RPG!</h1>
 	</header>
 	<div class="wrapper">
 		<div id="characters" class="container">
 			<div class="img-container green"">
 				<a href="#" id="choose-erlich">
 					<div class="text character-name">Erlich</div>
-					<img class="character-img" src="assets/images/erlich.jpeg" alt="erlich">
-					<div class="text character-pwr">120</div>
+					<img class="character-img" src="assets/images/erlich.jpeg" alt="erlich"/>
+					<div class="text character-hp">120</div>
 				</a>
 			</div>
 			<div class="img-container green">
 				<a href="#" id="choose-dinesh">
 					<div class="text character-name">Dinesh</div>
-					<img class="character-img" src="assets/images/dinesh.jpeg" alt="dinesh">
-					<div class="text character-pwr">100</div>
+					<img class="character-img" src="assets/images/dinesh.jpeg" alt="dinesh"/>
+					<div class="text character-hp">100</div>
 				</a>
 			</div>
 			<div class="img-container green">
 				<a href="#" id="choose-gilfoyle">
 					<div class="text character-name">Gilfoyle</div>
-					<img class="character-img" src="assets/images/gilfoyle.jpeg" alt="gilfoyle">
-					<div class="text character-pwr">150</div>
+					<img class="character-img" src="assets/images/gilfoyle.jpeg" alt="gilfoyle"/>
+					<div class="text character-hp">150</div>
 				</a>
 			</div>
 			<div class="img-container green">
 				<a href="#" id="choose-gavin">
 					<div class="text character-name">Gavin</div>
-					<img class="character-img" src="assets/images/gavin.jpeg" alt="gavin">
-					<div class="text character-pwr">180</div>
+					<img class="character-img" src="assets/images/gavin.jpeg" alt="gavin"/>
+					<div class="text character-hp">180</div>
 				</a>
 			</div>
 		</div>
 		<div class="label">Your Character</div>
 		<div class="container" id="chosen-character">
-			<div class="img-container green" id="chosen-erlich">
-				<div class="text character-name">Erlich</div>
-				<img class="character-img" src="assets/images/erlich.jpeg" alt="erlich">
-				<div class="text character-pwr">120</div>
+			<div class="img-container green" id="chosen">
+				<div class="text character-name" id="chosen-name"></div>
+				<img class="character-img character-img" id="chosen-img" src="" alt=""/>
+				<div class="text character-hp" id="chosen-hp"></div>
 			</div>
-			<div class="img-container green" id="chosen-dinesh">
+			<!-- <div class="img-container green" id="chosen-dinesh">
 				<div class="text character-name">Dinesh</div>
 				<img class="character-img" src="assets/images/dinesh.jpeg" alt="dinesh">
 				<div class="text character-pwr">100</div>
@@ -64,29 +64,29 @@
 				<div class="text character-name">Gavin</div>
 				<img class="character-img" src="assets/images/gavin.jpeg" alt="gavin">
 				<div class="text character-pwr">180</div>
-			</div>
+			</div> -->
 		</div>
 		<div class="label">Enemies Available To Attack</div>
 		<div class="container" id="enemy-row">
 			<div class="img-container red" id="fight-erlich">
 				<div class="text character-name">Erlich</div>
-				<img class="character-img" src="assets/images/erlich.jpeg" alt="erlich">
-				<div class="text character-pwr">120</div>
+				<img class="character-img" src="assets/images/erlich.jpeg" alt="erlich"/>
+				<div class="text character-hp">120</div>
 			</div>
 			<div class="img-container red" id="fight-dinesh">
 				<div class="text character-name">Dinesh</div>
-				<img class="character-img" src="assets/images/dinesh.jpeg" alt="dinesh">
-				<div class="text character-pwr">100</div>
+				<img class="character-img" src="assets/images/dinesh.jpeg" alt="dinesh"/>
+				<div class="text character-hp">100</div>
 			</div>
 			<div class="img-container red" id="fight-gilfoyle">
 				<div class="text character-name">Gilfoyle</div>
-				<img class="character-img" src="assets/images/gilfoyle.jpeg" alt="gilfoyle">
-				<div class="text character-pwr">150</div>
+				<img class="character-img" src="assets/images/gilfoyle.jpeg" alt="gilfoyle"/>
+				<div class="text character-hp">150</div>
 			</div>
 			<div class="img-container red" id="fight-gavin">
 				<div class="text character-name">Gavin</div>
-				<img class="character-img" src="assets/images/gavin.jpeg" alt="gavin">
-				<div class="text character-pwr">180</div>
+				<img class="character-img" src="assets/images/gavin.jpeg" alt="gavin"/>
+				<div class="text character-hp">180</div>
 			</div>
 		</div>
 		<div class="label">Fight Section</div>
@@ -95,26 +95,26 @@
 		</div>
 		<div class="label">Defender</div>
 		<div class="container" id="current-opponent">
-			<div class="img-container red" id="fight-erlich">
-				<div class="text character-name">Erlich</div>
-				<img class="character-img" src="assets/images/erlich.jpeg" alt="erlich">
-				<div class="text character-pwr">120</div>
+			<div class="img-container red" id="opponent">
+				<div class="text character-name" id="defender-name"></div>
+				<img class="character-img" src="" alt="" id="defender-img"/>
+				<div class="text character-hp" id="defender-hp"></div>
 			</div>
-			<div class="img-container red" id="fight-dinesh">
+			<!-- <div class="img-container red" id="opponent-dinesh">
 				<div class="text character-name">Dinesh</div>
 				<img class="character-img" src="assets/images/dinesh.jpeg" alt="dinesh">
 				<div class="text character-pwr">100</div>
 			</div>
-			<div class="img-container red" id="fight-gilfoyle">
+			<div class="img-container red" id="opponent-gilfoyle">
 				<div class="text character-name">Gilfoyle</div>
 				<img class="character-img" src="assets/images/gilfoyle.jpeg" alt="gilfoyle">
 				<div class="text character-pwr">150</div>
 			</div>
-			<div class="img-container red" id="fight-gavin">
+			<div class="img-container red" id="opponent-gavin">
 				<div class="text character-name">Gavin</div>
 				<img class="character-img" src="assets/images/gavin.jpeg" alt="gavin">
 				<div class="text character-pwr">180</div>
-			</div>
+			</div> -->
 		</div>
 		<div>
 			<button id="restart">Restart</button>
