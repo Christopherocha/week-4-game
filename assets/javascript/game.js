@@ -8,33 +8,33 @@ var players = {
 	player1:{
 		name: "Erlich",
 		healthPoints: 120,
-		attack: 5,
-		baseAttack: 5,
-		counterAttack: 20,
+		attack: 10,
+		baseAttack: 10,
+		counterAttack: 5,
 		img: "assets/images/erlich.jpeg"
 	},
 	player2:{
 		name: "Dinesh",
 		healthPoints: 100,
-		attack: 7,
-		baseAttack: 7,
-		counterAttack: 15,
+		attack: 10,
+		baseAttack: 10,
+		counterAttack: 5,
 		img: "assets/images/dinesh.jpeg"
 	},
 	player3:{
 		name: "Gilfoyle",
 		healthPoints: 150,
-		attack: 10,
-		baseAttack: 10,
-		counterAttack: 20,
+		attack: 12,
+		baseAttack: 12,
+		counterAttack: 10,
 		img: "assets/images/gilfoyle.jpeg"
 	},
 	player4:{
 		name: "Gavin",
 		healthPoints: 180,
-		attack: 10,
-		baseAttack: 10,
-		counterAttack: 25,
+		attack: 12,
+		baseAttack: 12,
+		counterAttack: 20,
 		img: "assets/images/gavin.jpeg"
 	}
 }
@@ -54,6 +54,9 @@ $(document).ready(function() {
 		$("#chosen-name").text(chosenCharacter.name);
 		$("#chosen-img").attr("src", chosenCharacter.img);
 		$("#chosen-hp").text(chosenCharacter.healthPoints);
+		$("#choose-message").show();
+		$("#died-message").hide();
+		$("#win-message").hide();
 	});
 
 	$("#choose-dinesh").on("click", function() {
@@ -68,6 +71,9 @@ $(document).ready(function() {
 		$("#chosen-name").text(chosenCharacter.name);
 		$("#chosen-img").attr("src", chosenCharacter.img);
 		$("#chosen-hp").text(chosenCharacter.healthPoints);
+		$("#choose-message").show();
+		$("#died-message").hide();
+		$("#win-message").hide();
 	});
 
 	$("#choose-gilfoyle").on("click", function() {
@@ -82,6 +88,9 @@ $(document).ready(function() {
 		$("#chosen-name").text(chosenCharacter.name);
 		$("#chosen-img").attr("src", chosenCharacter.img);
 		$("#chosen-hp").text(chosenCharacter.healthPoints);
+		$("#choose-message").show();
+		$("#died-message").hide();
+		$("#win-message").hide();
 	});
 
 	$("#choose-gavin").on("click", function() {
@@ -96,6 +105,9 @@ $(document).ready(function() {
 		$("#chosen-name").text(chosenCharacter.name);
 		$("#chosen-img").attr("src", chosenCharacter.img);
 		$("#chosen-hp").text(chosenCharacter.healthPoints);
+		$("#choose-message").show();
+		$("#died-message").hide();
+		$("#win-message").hide();
 	});
 	// End choose character logic
 
@@ -109,13 +121,13 @@ $(document).ready(function() {
 			$("#defender-name").text(currentEnemy.name);
 			$("#defender-img").attr("src", currentEnemy.img);
 			$("#defender-hp").text(currentEnemy.healthPoints);
+			$("#current-opponent").show();
+			$("#choose-message").hide();
 			
 			if (enemiesLeft < 3) {
 				$("#opponent").show();
 			}
-		} else {
-			// logic to mention that opponent already chosen
-		}
+		} 
 	});
 
 	$("#fight-dinesh").on("click", function() {
@@ -126,13 +138,13 @@ $(document).ready(function() {
 			$("#defender-name").text(currentEnemy.name);
 			$("#defender-img").attr("src", currentEnemy.img);
 			$("#defender-hp").text(currentEnemy.healthPoints);
+			$("#current-opponent").show();
+			$("#choose-message").hide();
 			
 			if (enemiesLeft < 3) {
 				$("#opponent").show();
 			}
-		} else {
-			//logic to mention that opponent already chosen
-		}
+		} 
 	});
 
 	$("#fight-gilfoyle").on("click", function() {
@@ -143,13 +155,13 @@ $(document).ready(function() {
 			$("#defender-name").text(currentEnemy.name);
 			$("#defender-img").attr("src", currentEnemy.img);
 			$("#defender-hp").text(currentEnemy.healthPoints);
+			$("#current-opponent").show();
+			$("#choose-message").hide();
 			
 			if (enemiesLeft < 3) {
 				$("#opponent").show();
 			}
-		} else {
-			//logic to mention that opponent already chosen
-		}
+		} 
 	});
 
 	$("#fight-gavin").on("click", function() {
@@ -160,13 +172,13 @@ $(document).ready(function() {
 			$("#defender-name").text(currentEnemy.name);
 			$("#defender-img").attr("src", currentEnemy.img);
 			$("#defender-hp").text(currentEnemy.healthPoints);
+			$("#current-opponent").show();
+			$("#choose-message").hide();
 
 			if (enemiesLeft < 3) {
 				$("#opponent").show();
 			}
-		} else {
-			//logic to mention that opponent already chosen
-		}
+		} 
 	});
 
 	// End logic to choose opponent
@@ -194,6 +206,7 @@ $(document).ready(function() {
 				$("#defender-name").text("");
 				$("#defender-img").attr("src", "");
 				$("#defender-hp").text("");
+				$("#choose-message").show();
 				// add logic to display message to choose a new opponent
 				if (enemiesLeft === 0) {
 					// Logic to restart the game
@@ -208,6 +221,9 @@ $(document).ready(function() {
 					$("#fight-dinesh").show();
 					$("#fight-gilfoyle").show();
 					$("#fight-gavin").show();
+					$("#chosen").hide();
+					$("#choose-message").hide();
+					$("#win-message").show();
 
 					//Hide enemy row and make sure all
 
@@ -215,6 +231,19 @@ $(document).ready(function() {
 
 			} else if (chosenCharacter.healthPoints <= 0) {
 				//logic for gameover bc your person died
+				characterSet = false;
+				chosenCharacter = false;
+				currentEnemy= false;
+				enemiesLeft = 3;
+
+				$("#died-message").show();
+				$("#characters").show();
+				$("#enemy-row").hide();
+				$("#fight-erlich").show();
+				$("#fight-dinesh").show();
+				$("#fight-gilfoyle").show();
+				$("#fight-gavin").show();
+				$("#chosen").hide();
 
 			}
 		}

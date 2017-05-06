@@ -1,6 +1,8 @@
 #body {
 	background: #000 url(../images/siliconValley.jpg) no-repeat;
 	background-size: cover;
+	min-height: 100vh;
+  	flex-direction: column;
 }
 
 .container {
@@ -8,13 +10,16 @@
 	width: 800px;
 	background-color: #fff;
 	position: relative;
-	margin-bottom: 10px;
+	margin: 20px 0 20px 20px;
 	background-color: transparent;
 }
 
 .label {
 	color: #fff;
-	font-size: 16px;
+	font-size: 24px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin: 20px 0 20px 20px;
 }
 
 .img-container {
@@ -68,7 +73,11 @@
 	width: 100%;
 }
 
-
+#h1 {
+	font-size: 28px;
+	float: right;
+	margin-right: 20px;
+}
 
 #enemy-row {
 	display: none;
@@ -99,5 +108,27 @@
 }
 
 #chosen {
+	display: none;
+}
+
+#choose-message {
+	color: red;
+	font-weight: bold;
+	display: none;
+}
+
+#attack {
+	margin: 20px 0 20px 20px;
+}
+
+#died-message {
+	color: red;
+	font-weight: bold;
+	display: none;
+}
+
+#win-message {
+	color: orange;
+	font-weight: bold;
 	display: none;
 }
