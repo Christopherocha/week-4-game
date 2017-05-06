@@ -15,7 +15,7 @@
 }
 
 .label {
-	color: #fff;
+	color: #ff6600;
 	font-size: 24px;
 	font-weight: bold;
 	margin-top: 20px;
@@ -128,7 +128,7 @@
 }
 
 #win-message {
-	color: orange;
+	color: #ff6600;
 	font-weight: bold;
 	display: none;
 }
